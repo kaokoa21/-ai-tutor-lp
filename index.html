@@ -3,101 +3,186 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
 <title>AI×伴走｜不登校専門オンライン家庭教師｜無料体験（60分×2回）</title>
 <meta name="description" content="AIが分析、人が伴走。不登校の中学生専門オンライン家庭教師。全教科対応／無料体験（60分×2回）／対応時間 8:00–22:00。LINEから簡単に申し込めます。">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#0c1116; --ink:#e8eef5; --sub:#b7c5d5; --line:#223043;
-  --key:#4bb8a9; --key-ink:#062d2a; --acc:#6ba2ff; --accent:#ffd66b;
-}
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
+:root{--bg:#0c1116;--ink:#e8eef5;--sub:#b7c5d5;--line:#223043;--key:#4bb8a9;--key-ink:#062d2a;--acc:#6ba2ff;--accent:#ffd66b}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
 body{font-family:'Noto Sans JP',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Hiragino Kaku Gothic ProN','Meiryo',sans-serif;background:#0b1117;color:var(--ink)}
-a{color:inherit}
+a{color:inherit}main{display:block}
 .container{width:min(1080px,92%);margin:0 auto}
-.section{padding:64px 0}
-.section.alt{background:rgba(255,255,255,.03)}
-h1,h2,h3{line-height:1.3;margin:0 0 12px}
-p{line-height:1.9;margin:0 0 12px;color:var(--sub)}
-ul{margin:0 0 12px}
-small{color:var(--sub)}
-
-/* ヘッダー */
+.section{padding:64px 0}.section.alt{background:rgba(255,255,255,.03)}
+h1,h2,h3{line-height:1.3;margin:0 0 12px}p{line-height:1.9;margin:0 0 12px;color:var(--sub)}small{color:var(--sub)}
 .header{position:sticky;top:0;z-index:9;background:rgba(12,17,22,.7);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .header .inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-.brand{font-weight:700;text-decoration:none}
-.nav a{margin-left:14px;text-decoration:none;opacity:.9}
+.brand{font-weight:700;text-decoration:none}.nav a{margin-left:14px;text-decoration:none;opacity:.9}
 .btn{display:inline-block;padding:12px 16px;border-radius:12px;border:1px solid var(--line);text-decoration:none;font-weight:700}
-.btn.primary{background:linear-gradient(180deg,var(--key),#3aa697);border:none;color:var(--key-ink)}
-.btn.ghost{background:transparent}
-.btn.big{padding:16px 20px;border-radius:14px;font-size:1.05rem}
+.btn.primary{background:linear-gradient(180deg,var(--key),#3aa697);border:none;color:var(--key-ink)}.btn.ghost{background:transparent}.btn.big{padding:16px 20px;border-radius:14px;font-size:1.05rem}
 
-/* ヒーロー */
-.hero{padding:92px 0;border-bottom:1px solid var(--line);background:
- radial-gradient(1200px 500px at 80% -10%, rgba(75,184,169,.25), transparent 60%),
- radial-gradient(1000px 400px at -10% 0%, rgba(107,162,255,.18), transparent 60%);}
+/* --- Hero & mobile hotfix --- */
+.hero{min-height:72vh;padding:120px 0 48px;border-bottom:1px solid var(--line);
+  display:flex;align-items:center;background:
+  radial-gradient(1200px 500px at 80% -10%, rgba(75,184,169,.25), transparent 60%),
+  radial-gradient(1000px 400px at -10% 0%, rgba(107,162,255,.18), transparent 60%)}
 .hero h1{font-size:clamp(26px,4.1vw,42px)}
 .underline{background:linear-gradient(90deg,var(--key),var(--acc));padding:.05em .25em;border-radius:.25rem;color:#081316}
-.lead{font-size:1.12rem}
-.cta{display:flex;gap:12px;margin:14px 0 4px}
+.lead{font-size:1.12rem}.cta{display:flex;gap:12px;margin:14px 0 4px}
 .badges{display:flex;gap:10px;flex-wrap:wrap;list-style:none;padding:0}
 .badges li{border:1px solid var(--line);background:rgba(255,255,255,.05);padding:8px 12px;border-radius:999px;font-size:.9rem}
-
-/* グリッド＆カード */
-.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.card{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:14px;padding:16px}
-.note{background:rgba(107,162,255,.06);border-color:#2f4c6f}
-
-.check{list-style:none;padding-left:0}
-.check li{position:relative;padding-left:26px;margin:8px 0;color:var(--ink)}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:14px;padding:16px}.note{background:rgba(107,162,255,.06);border-color:#2f4c6f}
+.check{list-style:none;padding-left:0}.check li{position:relative;padding-left:26px;margin:8px 0;color:var(--ink)}
 .check li::before{content:'✓';position:absolute;left:0;top:-1px;background:var(--key);color:var(--key-ink);border-radius:6px;padding:0 6px;font-weight:900}
-
-/* プラン表 */
 .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .plan{border:1px solid var(--line);border-radius:14px;padding:16px;background:rgba(255,255,255,.03);position:relative}
 .plan.featured{background:linear-gradient(180deg, rgba(75,184,169,.17), rgba(75,184,169,.05));border-color:#2b5f58}
 .plan .badge{position:absolute;right:12px;top:12px;background:var(--accent);color:#2d2200;font-weight:800;padding:4px 8px;border-radius:999px;font-size:.8rem}
-.price{font-size:1.3rem;margin:8px 0 0}
-.meta{font-size:.95rem;color:var(--sub)}
-
-/* ステップ */
+.price{font-size:1.3rem;margin:8px 0 0}.meta{font-size:.95rem;color:var(--sub)}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;counter-reset:step}
 .steps li{list-style:none;border:1px dashed var(--line);border-radius:12px;padding:14px;background:rgba(255,255,255,.02)}
 .steps li::before{counter-increment:step;content:counter(step);display:inline-grid;place-items:center;width:28px;height:28px;border-radius:999px;background:var(--acc);color:#061022;font-weight:800;margin-right:8px}
-
-/* プロフィール */
 .profile{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .placeholder{aspect-ratio:1/1;border:2px dashed var(--line);border-radius:14px;display:grid;place-items:center;color:var(--sub)}
-
-/* FAQ */
 .faq details{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:12px;padding:12px;margin:8px 0}
-
-/* その他 */
-.contact{text-align:center}
-.footer{border-top:1px solid var(--line);padding:18px 0;background:rgba(255,255,255,.02)}
-
-@media (max-width:900px){
-  .grid-2,.grid-3,.plans,.steps,.profile{grid-template-columns:1fr}
-  .nav a:not(.btn){display:none}
-}
+.contact{text-align:center}.footer{border-top:1px solid var(--line);padding:18px 0;background:rgba(255,255,255,.02)}
+@media (max-width:900px){.grid-2,.grid-3,.plans,.steps,.profile{grid-template-columns:1fr}.nav a:not(.btn){display:none}}
 </style>
 </head>
 <body>
-<!-- ここから本文 -->
 <header class="header">
   <div class="container inner">
     <a class="brand" href="#top">AI×伴走 家庭教師</a>
     <nav class="nav">
-      <a href="#pricing">料金</a>
-      <a href="#flow">流れ</a>
-      <a href="#faq">FAQ</a>
+      <a href="#pricing">料金</a><a href="#flow">流れ</a><a href="#faq">FAQ</a>
       <a class="btn small" href="#contact">無料体験</a>
     </nav>
   </div>
 </header>
 
-<!-- 以下省略（ヒーロー〜フッターまで全体） -->
+<main id="top">
+  <section class="hero">
+    <div class="container">
+      <h1>AIが分析、<span class="underline">人が伴走。</span><br>不登校の中学生が“学び”と“リズム”を取り戻すオンライン家庭教師</h1>
+      <p class="lead">全教科対応／対応時間 <strong>8:00–22:00</strong>（曜日は相談のうえ決定）。まずは <strong>無料体験（60分×2回）</strong>から。</p>
+      <div class="cta">
+        <a class="btn primary" href="https://line.me/R/ti/p/%40YOUR_ID" target="_blank" rel="noopener">LINEで無料体験を申し込む</a>
+        <a class="btn ghost" href="#how">はじめての方へ</a>
+      </div>
+      <ul class="badges"><li>AIで理解度を可視化</li><li>人の学習管理とメンタル伴走</li><li>保護者へ週次レポート</li></ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid-2">
+      <div>
+        <h2>こんなお悩みありませんか？</h2>
+        <ul class="check">
+          <li>勉強の遅れが不安。どこから手をつければいいか分からない</li>
+          <li>生活リズムが乱れて、勉強が続かない</li>
+          <li>塾はハードルが高い。自宅から少しずつ再開したい</li>
+          <li>保護者が進捗を把握できず、不安が募る</li>
+        </ul>
+      </div>
+      <div class="card note">
+        <h3>解決の方針（AI×伴走）</h3>
+        <p><strong>AIの可視化</strong>で「今やるべき」を明確にし、<strong>人の伴走</strong>で無理のない計画・声かけ・振り返りを。小さな“できた”を積み重ね、習慣化へつなげます。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container grid-3">
+      <div class="card"><h3>AIで“今やるべき”を提示</h3><p>理解度診断→単元の最短ルートを提案。穴を素早くリカバー。</p></div>
+      <div class="card"><h3>人が学習管理とメンタルに伴走</h3><p>負担を増やさず、できる量から。日々の声かけで継続を支援。</p></div>
+      <div class="card"><h3>保護者へ週次レポート</h3><p>進捗・次週計画を共有。チャットでのご相談も。</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="service">
+    <div class="container grid-2">
+      <div>
+        <h2>サービス内容</h2>
+        <ul>
+          <li><strong>対象</strong>：不登校の中学生／<strong>全教科対応</strong></li>
+          <li><strong>授業</strong>：オンライン 週1回×60分（他プランあり）</li>
+          <li><strong>自習設計</strong>：授業の最後に「今週のミニ課題」を10分で確定</li>
+          <li><strong>フォロー</strong>：平日週5の30秒チェックイン／返信は24時間以内</li>
+          <li><strong>対応時間</strong>：<strong>8:00–22:00</strong>（曜日は相談のうえ決定）</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>無料体験（60分×2回）</h3>
+        <p>現状を一緒に整理し、AI簡易診断と“小さな成功体験”を作ります。合うかどうかを見極めてから継続をご判断ください。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="pricing">
+    <div class="container">
+      <h2>料金（暫定）</h2>
+      <div class="plans">
+        <div class="plan"><h3>ライト</h3><p class="price"><strong>18,000円</strong><span>/月</span></p><p class="meta">週1×60分（月4回）@4,500/回</p><ul><li>AI分析＋学習計画</li><li>週1レポート</li></ul></div>
+        <div class="plan featured"><div class="badge">おすすめ</div><h3>スタンダード</h3><p class="price"><strong>24,000円</strong><span>/月</span></p><p class="meta">週1×60分＋日次フォロー（週5）</p><ul><li>AI分析＋学習計画</li><li>週1レポート</li><li>日次チェックイン</li></ul></div>
+        <div class="plan"><h3>リズム回復</h3><p class="price"><strong>24,000円</strong><span>/月</span></p><p class="meta">30分×2/週（月8回）短時間で習慣化</p><ul><li>短時間×高頻度で再起動</li><li>週1レポート</li></ul></div>
+      </div>
+      <p class="meta">※価格は叩き台です。ご要望に合わせて調整可能です。</p>
+    </div>
+  </section>
+
+  <section class="section" id="flow">
+    <div class="container">
+      <h2 id="how">はじめかた（最短3日）</h2>
+      <ol class="steps">
+        <li><strong>LINEで無料体験を申込</strong>（友だち追加→学年・希望時間帯を送信）</li>
+        <li><strong>体験2回</strong>（AI簡易診断＋小さな成功体験）</li>
+        <li><strong>プラン決定</strong>（曜日確定／必要に応じて振替）</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section alt" id="profile">
+    <div class="container profile">
+      <div><h2>プロフィール</h2><p>教育・福祉の現場で活動（塾講師／プログラミング講師／放課後等デイ／障がい者グループホーム等）。「否定しない・急かさない」を土台に、<strong>“できた”を積める設計</strong>が得意です。</p></div>
+      <div class="placeholder">写真をここに差し込み（後日）</div>
+    </div>
+  </section>
+
+  <section class="section" id="voice">
+    <div class="container"><h2>保護者の声（匿名）</h2><div class="card"><p>「とても分かりやすい授業でした。終わった後、もう1回お願いしました。」</p><small>※個人が特定されない形で掲載しています。</small></div></div>
+  </section>
+
+  <section class="section alt faq" id="faq">
+    <div class="container">
+      <h2>よくある質問</h2>
+      <details><summary>カメラOFFでも大丈夫？</summary><p>ご希望に合わせて柔軟に対応します。負担の少ない形から始めましょう。</p></details>
+      <details><summary>勉強の遅れはどこまでリカバーできますか？</summary><p>AIで穴を特定→単元の最短ルートでリカバー。進路相談も可能です。</p></details>
+      <details><summary>振替はできますか？</summary><p>前日までのご連絡で<strong>月1回まで無料振替</strong>。当日の体調不良は可能な限り振替します。</p></details>
+      <details><summary>返金はありますか？</summary><p>月内の<strong>未消化分は返金</strong>（決済手数料＋事務手数料5%を控除）。体験は無料・無条件で終了可能です。</p></details>
+      <details><summary>いつから始められますか？</summary><p><strong>8:00–22:00</strong>の範囲で相談のうえ確定します。空き枠はLINEでご案内します。</p></details>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="container">
+      <h2>無料体験の申し込み</h2>
+      <p>まずはLINEから「学年・ご希望時間帯（例：平日午前／夕方）」を送ってください。24時間以内にご返信します。</p>
+      <p><a class="btn primary big" href="https://line.me/R/ti/p/%40YOUR_ID" target="_blank" rel="noopener">LINEで無料体験を申し込む</a></p>
+      <p class="meta">LINEが使えない場合：<a href="mailto:example@example.com">example@example.com</a> へご連絡ください。</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+    <small>© 2025 AI×伴走 家庭教師</small>
+    <nav style="display:flex;gap:12px">
+      <a href="#" aria-disabled="true">プライバシーポリシー（後日）</a>
+      <a href="#" aria-disabled="true">特定商取引法に基づく表記（後日）</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
